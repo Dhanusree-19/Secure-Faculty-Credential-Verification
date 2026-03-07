@@ -7,13 +7,13 @@ const StatusBadge = ({ status }) => {
     Rejected: "badge-rejected",
   };
   const iconMap = {
-    Verified: "✓ ",
-    Pending:  "⏳ ",
-    Rejected: "✗ ",
+    Verified: "✓",
+    Pending:  "●",
+    Rejected: "✕",
   };
   return (
     <span className={`sfv-badge ${classMap[status] || "badge-pending"}`}>
-      {iconMap[status] || ""}
+      <span>{iconMap[status] || "●"}</span>
       {status}
     </span>
   );
